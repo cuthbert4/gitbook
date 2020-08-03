@@ -1,0 +1,524 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>XSS防范 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../chapter3/section1.html" />
+    
+    
+    <link rel="prev" href="../chapter1/section3.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Web应用开发安全规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../chapter1/section1.html">
+            
+                <a href="../chapter1/section1.html">
+            
+                    
+                    Sql注入防范
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../chapter1/section2.html">
+            
+                <a href="../chapter1/section2.html">
+            
+                    
+                    关系型数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../chapter1/section3.html">
+            
+                <a href="../chapter1/section3.html">
+            
+                    
+                    非关系型数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="section2.html">
+            
+                <a href="section2.html">
+            
+                    
+                    XSS防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../chapter3/section1.html">
+            
+                <a href="../chapter3/section1.html">
+            
+                    
+                    XXE注入防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../chapter4/section1.html">
+            
+                <a href="../chapter4/section1.html">
+            
+                    
+                    文件上传漏洞防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../chapter5/section1.html">
+            
+                <a href="../chapter5/section1.html">
+            
+                    
+                    任意文件读取漏洞防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../chapter6/section1.html">
+            
+                <a href="../chapter6/section1.html">
+            
+                    
+                    CSRF防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../chapter7/section1.html">
+            
+                <a href="../chapter7/section1.html">
+            
+                    
+                    SSRF防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../chapter8/section1.html">
+            
+                <a href="../chapter8/section1.html">
+            
+                    
+                    动态代码执行漏洞防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../chapter9/section1.html">
+            
+                <a href="../chapter9/section1.html">
+            
+                    
+                    反序列化漏洞防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../chapter10/section1.html">
+            
+                <a href="../chapter10/section1.html">
+            
+                    
+                    越权漏洞防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="../chapter11/section1.html">
+            
+                <a href="../chapter11/section1.html">
+            
+                    
+                    不安全的加密方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="../chapter12/section1.html">
+            
+                <a href="../chapter12/section1.html">
+            
+                    
+                    URL重定向漏洞防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="../end/README.md">
+            
+                <span>
+            
+                    
+                    结束
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >XSS防范</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="1-&#x4EC0;&#x4E48;&#x662F;xss">1. &#x4EC0;&#x4E48;&#x662F;XSS</h3>
+<p>&#x4EBA;&#x4EEC;&#x7ECF;&#x5E38;&#x5C06;&#x8DE8;&#x7AD9;&#x811A;&#x672C;&#x653B;&#x51FB;&#xFF08;Cross Site Scripting&#xFF09;&#x7F29;&#x5199;&#x4E3A;CSS&#xFF0C;&#x4F46;&#x8FD9;&#x4F1A;&#x4E0E;&#x5C42;&#x53E0;&#x6837;&#x5F0F;&#x8868;&#xFF08;Cascading Style Sheets&#xFF0C;CSS&#xFF09;&#x7684;&#x7F29;&#x5199;&#x6DF7;&#x6DC6;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6709;&#x4EBA;&#x5C06;&#x8DE8;&#x7AD9;&#x811A;&#x672C;&#x653B;&#x51FB;&#x7F29;&#x5199;&#x4E3A;XSS&#x3002;
+&#x8DE8;&#x7AD9;&#x811A;&#x672C;&#x653B;&#x51FB;&#xFF08;XSS&#xFF09;&#xFF0C;&#x662F;&#x6700;&#x666E;&#x904D;&#x7684;Web&#x5E94;&#x7528;&#x5B89;&#x5168;&#x6F0F;&#x6D1E;&#x3002;&#x8FD9;&#x7C7B;&#x6F0F;&#x6D1E;&#x80FD;&#x591F;&#x4F7F;&#x5F97;&#x653B;&#x51FB;&#x8005;&#x5D4C;&#x5165;&#x6076;&#x610F;&#x811A;&#x672C;&#x4EE3;&#x7801;&#x5230;&#x6B63;&#x5E38;&#x7528;&#x6237;&#x4F1A;&#x8BBF;&#x95EE;&#x5230;&#x7684;&#x9875;&#x9762;&#x4E2D;&#xFF0C;&#x5F53;&#x6B63;&#x5E38;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x8BE5;&#x9875;&#x9762;&#x65F6;&#xFF0C;&#x5219;&#x53EF;&#x5BFC;&#x81F4;&#x5D4C;&#x5165;&#x7684;&#x6076;&#x610F;&#x811A;&#x672C;&#x4EE3;&#x7801;&#x7684;&#x6267;&#x884C;&#xFF0C;&#x4ECE;&#x800C;&#x8FBE;&#x5230;&#x6076;&#x610F;&#x653B;&#x51FB;&#x7528;&#x6237;&#x7684;&#x76EE;&#x7684;&#x3002;
+&#x653B;&#x51FB;&#x8005;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6237;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x6267;&#x884C;&#x5176;&#x9884;&#x5B9A;&#x4E49;&#x7684;&#x6076;&#x610F;&#x811A;&#x672C;&#xFF0C;&#x5176;&#x5BFC;&#x81F4;&#x7684;&#x5371;&#x5BB3;&#x53EF;&#x60F3;&#x800C;&#x77E5;&#xFF0C;&#x5982;&#x52AB;&#x6301;&#x7528;&#x6237;&#x4F1A;&#x8BDD;&#xFF0C;&#x63D2;&#x5165;&#x6076;&#x610F;&#x5185;&#x5BB9;&#x3001;&#x91CD;&#x5B9A;&#x5411;&#x7528;&#x6237;&#x3001;&#x4F7F;&#x7528;&#x6076;&#x610F;&#x8F6F;&#x4EF6;&#x52AB;&#x6301;&#x7528;&#x6237;&#x6D4F;&#x89C8;&#x5668;&#x3001;&#x7E41;&#x6B96;XSS&#x8815;&#x866B;&#xFF0C;&#x751A;&#x81F3;&#x7834;&#x574F;&#x7F51;&#x7AD9;&#x3001;&#x4FEE;&#x6539;&#x8DEF;&#x7531;&#x5668;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x7B49;&#x3002;
+&#x4ECE;&#x653B;&#x51FB;&#x4EE3;&#x7801;&#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x4E09;&#x4E2A;&#x7C7B;&#x578B;&#xFF1A;</p>
+<p>&#xFF08;1&#xFF09;&#x5B58;&#x50A8;&#x578B;XSS&#xFF1A;&#x6700;&#x76F4;&#x63A5;&#x7684;&#x5371;&#x5BB3;&#x7C7B;&#x578B;&#xFF0C;&#x8DE8;&#x7AD9;&#x4EE3;&#x7801;&#x5B58;&#x50A8;&#x5728;&#x670D;&#x52A1;&#x5668;&#xFF08;&#x6570;&#x636E;&#x5E93;&#xFF09;&#x3002;</p>
+<p>&#xFF08;2&#xFF09;&#x53CD;&#x5C04;&#x578B;XSS&#xFF1A;&#x6700;&#x666E;&#x904D;&#x7684;&#x7C7B;&#x578B;&#x3002;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;-&#x8DE8;&#x7AD9;&#x94FE;&#x63A5;-&#x8FD4;&#x56DE;&#x8DE8;&#x7AD9;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#xFF08;3&#xFF09;DOM&#x8DE8;&#x7AD9;&#xFF08;DOM XSS&#xFF09;&#xFF1A;DOM&#xFF08;document object model&#x6587;&#x6863;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#xFF09;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x811A;&#x672C;&#x5904;&#x7406;&#x903B;&#x8F91;&#x5BFC;&#x81F4;&#x7684;&#x5B89;&#x5168;&#x95EE;&#x9898;&#x3002;</p>
+<p>XSS&#x6F0F;&#x6D1E;&#x53EF;&#x4EE5;&#x8FFD;&#x6EAF;&#x5230;&#x4E0A;&#x4E16;&#x7EAA;90&#x5E74;&#x4EE3;&#x3002;&#x5927;&#x91CF;&#x7684;&#x7F51;&#x7AD9;&#x66FE;&#x906D;&#x53D7;XSS&#x6F0F;&#x6D1E;&#x653B;&#x51FB;&#x6216;&#x88AB;&#x53D1;&#x73B0;&#x6B64;&#x7C7B;&#x6F0F;&#x6D1E;&#xFF0C;&#x5982;Twitter&#x3001;Facebook&#x3001;MySpace&#x3001;&#x65B0;&#x6D6A;&#x5FAE;&#x535A;&#x548C;&#x767E;&#x5EA6;&#x8D34;&#x5427;&#x3002;&#x7814;&#x7A76;&#x8868;&#x660E;&#xFF0C;&#x6700;&#x8FD1;&#x51E0;&#x5E74;XSS&#x5DF2;&#x7ECF;&#x8D85;&#x8FC7;&#x7F13;&#x51B2;&#x533A;&#x6EA2;&#x51FA;&#x6210;&#x4E3A;&#x6700;&#x6D41;&#x884C;&#x7684;&#x653B;&#x51FB;&#x65B9;&#x5F0F;&#xFF0C;&#x6709;68%&#x7684;&#x7F51;&#x7AD9;&#x53EF;&#x80FD;&#x906D;&#x53D7;&#x6B64;&#x7C7B;&#x653B;&#x51FB;&#x3002;&#x6839;&#x636E;&#x5F00;&#x653E;&#x7F51;&#x9875;&#x5E94;&#x7528;&#x5B89;&#x5168;&#x8BA1;&#x5212;&#xFF08;Open Web Application Security Project&#xFF09;&#x516C;&#x5E03;&#x7684;2010&#x5E74;&#x7EDF;&#x8BA1;&#x6570;&#x636E;&#xFF0C;&#x5728;Web&#x5B89;&#x5168;&#x5A01;&#x80C1;&#x524D;10&#x4F4D;&#x4E2D;&#xFF0C;XSS&#x6392;&#x540D;&#x7B2C;2&#xFF0C;&#x4EC5;&#x6B21;&#x4E8E;&#x4EE3;&#x7801;&#x6CE8;&#x5165;&#xFF08;Injection&#xFF09;&#x3002;</p>
+<h3 id="2-&#x5982;&#x4F55;&#x9632;&#x8303;xss">2. &#x5982;&#x4F55;&#x9632;&#x8303;XSS</h3>
+<p>&#xFF08;1&#xFF09;&#x4E0D;&#x4FE1;&#x4EFB;&#x7528;&#x6237;&#x63D0;&#x4EA4;&#x7684;&#x4EFB;&#x4F55;&#x5185;&#x5BB9;&#xFF0C;&#x5BF9;&#x6240;&#x6709;&#x7528;&#x6237;&#x63D0;&#x4EA4;&#x5185;&#x5BB9;&#x8FDB;&#x884C;&#x53EF;&#x9760;&#x7684;&#x8F93;&#x5165;&#x9A8C;&#x8BC1;&#xFF0C;&#x5305;&#x62EC;&#x5BF9;URL&#x3001;&#x67E5;&#x8BE2;&#x5173;&#x952E;&#x5B57;&#x3001;HTTP&#x5934;&#x3001;REFER&#x3001;POST&#x6570;&#x636E;&#x7B49;&#xFF0C;&#x4EC5;&#x63A5;&#x53D7;&#x6307;&#x5B9A;&#x957F;&#x5EA6;&#x8303;&#x56F4;&#x5185;&#x3001;&#x91C7;&#x7528;&#x9002;&#x5F53;&#x683C;&#x5F0F;&#x3001;&#x91C7;&#x7528;&#x6240;&#x9884;&#x671F;&#x7684;&#x5B57;&#x7B26;&#x7684;&#x5185;&#x5BB9;&#x63D0;&#x4EA4;&#xFF0C;&#x5BF9;&#x5176;&#x4ED6;&#x7684;&#x4E00;&#x5F8B;&#x8FC7;&#x6EE4;&#x3002;&#x5C3D;&#x91CF;&#x91C7;&#x7528;POST&#x800C;&#x975E;GET&#x63D0;&#x4EA4;&#x8868;&#x5355;&#xFF1B;&#x5BF9;&#x201C;&lt;&#x201D;&#xFF0C;&#x201C;&gt;&#x201D;&#xFF0C;&#x201C;&#xFF1B;&#x201D;&#xFF0C;&#x201C;&#x201D;&#x201D;&#x7B49;&#x5B57;&#x7B26;&#x505A;&#x8FC7;&#x6EE4;&#xFF1B;&#x4EFB;&#x4F55;&#x5185;&#x5BB9;&#x8F93;&#x51FA;&#x5230;&#x9875;&#x9762;&#x4E4B;&#x524D;&#x90FD;&#x5FC5;&#x987B;&#x52A0;&#x4EE5;en-code&#xFF0C;&#x907F;&#x514D;&#x4E0D;&#x5C0F;&#x5FC3;&#x628A;htmltag&#x663E;&#x793A;&#x51FA;&#x6765;&#x3002;</p>
+<p>&#xFF08;2&#xFF09;&#x5B9E;&#x73B0;Session &#x6807;&#x8BB0;&#xFF08;session tokens&#xFF09;&#x3001;CAPTCHA&#xFF08;&#x9A8C;&#x8BC1;&#x7801;&#xFF09;&#x7CFB;&#x7EDF;&#x6216;&#x8005;HTTP&#x5F15;&#x7528;&#x5934;&#x68C0;&#x67E5;&#xFF0C;&#x4EE5;&#x9632;&#x529F;&#x80FD;&#x88AB;&#x7B2C;&#x4E09;&#x65B9;&#x7F51;&#x7AD9;&#x6240;&#x6267;&#x884C;&#xFF0C;&#x5BF9;&#x4E8E;&#x7528;&#x6237;&#x63D0;&#x4EA4;&#x4FE1;&#x606F;&#x7684;&#x4E2D;&#x7684;img&#x7B49;link&#xFF0C;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;&#x91CD;&#x5B9A;&#x5411;&#x56DE;&#x672C;&#x7AD9;&#x3001;&#x4E0D;&#x662F;&#x771F;&#x7684;&#x56FE;&#x7247;&#x7B49;&#x53EF;&#x7591;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#xFF08;3&#xFF09;cookie &#x9632;&#x76D7;&#x3002;&#x907F;&#x514D;&#x76F4;&#x63A5;&#x5728;cookie&#x4E2D;&#x6CC4;&#x9732;&#x7528;&#x6237;&#x9690;&#x79C1;&#xFF0C;&#x4F8B;&#x5982;email&#x3001;&#x5BC6;&#x7801;&#xFF0C;&#x7B49;&#x7B49;&#xFF1B;&#x901A;&#x8FC7;&#x4F7F;cookie&#x548C;&#x7CFB;&#x7EDF;IP&#x7ED1;&#x5B9A;&#x6765;&#x964D;&#x4F4E;cookie&#x6CC4;&#x9732;&#x540E;&#x7684;&#x5371;&#x9669;&#x3002;&#x8FD9;&#x6837;&#x653B;&#x51FB;&#x8005;&#x5F97;&#x5230;&#x7684;cookie&#x6CA1;&#x6709;&#x5B9E;&#x9645;&#x4EF7;&#x503C;&#xFF0C;&#x5F88;&#x96BE;&#x62FF;&#x6765;&#x76F4;&#x63A5;&#x8FDB;&#x884C;&#x91CD;&#x653E;&#x653B;&#x51FB;&#x3002;</p>
+<p>&#xFF08;4&#xFF09;&#x786E;&#x8BA4;&#x63A5;&#x6536;&#x7684;&#x5185;&#x5BB9;&#x88AB;&#x59A5;&#x5584;&#x5730;&#x89C4;&#x8303;&#x5316;&#xFF0C;&#x4EC5;&#x5305;&#x542B;&#x6700;&#x5C0F;&#x7684;&#x3001;&#x5B89;&#x5168;&#x7684;Tag&#xFF08;&#x6CA1;&#x6709;JavaScript&#xFF09;&#xFF0C;&#x53BB;&#x6389;&#x4EFB;&#x4F55;&#x5BF9;&#x8FDC;&#x7A0B;&#x5185;&#x5BB9;&#x7684;&#x5F15;&#x7528;&#xFF08;&#x5C24;&#x5176;&#x662F;&#x6837;&#x5F0F;&#x8868;&#x548C;JavaScript&#xFF09;&#xFF0C;&#x4F7F;&#x7528;HTTPonly&#x7684;cookie&#x3002;</p>
+<p><strong>&#x9519;&#x8BEF;&#x5199;&#x6CD5;&#xFF1A;</strong></p>
+<p>&#x53CD;&#x5C04;&#x578B;XSS&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/reflect&quot;</span>)
+<span class="hljs-meta">@ResponseBody</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">reflect</span><span class="hljs-params">(String xss)</span> </span>{
+    <span class="hljs-keyword">return</span> xss;
+}
+</code></pre>
+<p>&#x5B58;&#x50A8;&#x578B;XSS&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/stored/store&quot;</span>)
+<span class="hljs-meta">@ResponseBody</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">store</span><span class="hljs-params">(String xss, HttpServletResponse response)</span> </span>{
+    Cookie cookie = <span class="hljs-keyword">new</span> Cookie(<span class="hljs-string">&quot;xss&quot;</span>, xss);
+    response.addCookie(cookie);
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Set param into cookie&quot;</span>;
+}
+</code></pre>
+<p><strong>&#x6B63;&#x786E;&#x5199;&#x6CD5;&#xFF1A;</strong></p>
+<pre><code class="lang-java"><span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/safe&quot;</span>)
+<span class="hljs-meta">@ResponseBody</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">safe</span><span class="hljs-params">(String xss)</span> </span>{
+    <span class="hljs-keyword">return</span> encode(xss);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">encode</span><span class="hljs-params">(String origin)</span> </span>{
+    origin = StringUtils.replace(origin, <span class="hljs-string">&quot;&amp;&quot;</span>, <span class="hljs-string">&quot;&amp;amp;&quot;</span>);
+    origin = StringUtils.replace(origin, <span class="hljs-string">&quot;&lt;&quot;</span>, <span class="hljs-string">&quot;&amp;lt;&quot;</span>);
+    origin = StringUtils.replace(origin, <span class="hljs-string">&quot;&gt;&quot;</span>, <span class="hljs-string">&quot;&amp;gt;&quot;</span>);
+    origin = StringUtils.replace(origin, <span class="hljs-string">&quot;\&quot;&quot;</span>, <span class="hljs-string">&quot;&amp;quot;&quot;</span>);
+    origin = StringUtils.replace(origin, <span class="hljs-string">&quot;&apos;&quot;</span>, <span class="hljs-string">&quot;&amp;#x27;&quot;</span>);
+    origin = StringUtils.replace(origin, <span class="hljs-string">&quot;/&quot;</span>, <span class="hljs-string">&quot;&amp;#x2F;&quot;</span>);
+    <span class="hljs-keyword">return</span> origin;
+}
+</code></pre>
+<p>&#x6216;&#x8005;&#x4F7F;&#x7528;ESAPI</p>
+<table>
+<thead>
+<tr>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ESAPI.encoder().encodeForHTML(input)</td>
+<td>&#x4F7F;&#x7528;HTML&#x5B9E;&#x4F53;&#x7F16;&#x7801;&#x5BF9;HTML&#x6570;&#x636E;&#x8FDB;&#x884C;&#x8F6C;&#x4E49;</td>
+</tr>
+<tr>
+<td>ESAPI.encoder().encodeForHTMLAttribute(input)</td>
+<td>&#x8F6C;&#x4E49;HTML&#x5C5E;&#x6027;</td>
+</tr>
+<tr>
+<td>ESAPI.encoder().encodeForJavaScript(input)</td>
+<td>&#x8F6C;&#x4E49;JavaScript&#x5B57;&#x7B26;&#x4E32;</td>
+</tr>
+<tr>
+<td>ESAPI.encoder().encodeForCSS(input)</td>
+<td>&#x8F6C;&#x4E49;CSS&#x5B57;&#x7B26;&#x4E32;</td>
+</tr>
+<tr>
+<td>ESAPI.encoder().encodeForURL(input)</td>
+<td>URL&#x7F16;&#x7801;</td>
+</tr>
+<tr>
+<td>ESAPI.encoder().encodeForXML(input)</td>
+<td>&#x7F16;&#x7801;&#x7528;&#x4E8E;XML&#x5143;&#x7D20;&#x7684;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td>ESAPI.encoder().encodeForXMLAttribute(input)</td>
+<td>&#x7F16;&#x7801;&#x7528;&#x4E8E;XML&#x5C5E;&#x6027;&#x7684;&#x6570;&#x636E;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../chapter1/section3.html" class="navigation navigation-prev " aria-label="Previous page: 非关系型数据库">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../chapter3/section1.html" class="navigation navigation-next " aria-label="Next page: XXE注入防范">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"XSS防范","level":"2.2","depth":1,"next":{"title":"XXE注入防范","level":"2.3","depth":1,"path":"chapter3/section1.md","ref":"chapter3/section1.md","articles":[]},"previous":{"title":"非关系型数据库","level":"2.1.2","depth":2,"path":"chapter1/section3.md","ref":"chapter1/section3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/section2.md","mtime":"2020-07-16T11:31:53.165Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-03T10:07:23.704Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

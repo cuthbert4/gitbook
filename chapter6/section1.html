@@ -1,0 +1,464 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>CSRF防范 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../chapter7/section1.html" />
+    
+    
+    <link rel="prev" href="../chapter5/section1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Web应用开发安全规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../chapter1/section1.html">
+            
+                <a href="../chapter1/section1.html">
+            
+                    
+                    Sql注入防范
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../chapter1/section2.html">
+            
+                <a href="../chapter1/section2.html">
+            
+                    
+                    关系型数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../chapter1/section3.html">
+            
+                <a href="../chapter1/section3.html">
+            
+                    
+                    非关系型数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../chapter2/section2.html">
+            
+                <a href="../chapter2/section2.html">
+            
+                    
+                    XSS防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../chapter3/section1.html">
+            
+                <a href="../chapter3/section1.html">
+            
+                    
+                    XXE注入防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../chapter4/section1.html">
+            
+                <a href="../chapter4/section1.html">
+            
+                    
+                    文件上传漏洞防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../chapter5/section1.html">
+            
+                <a href="../chapter5/section1.html">
+            
+                    
+                    任意文件读取漏洞防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.6" data-path="section1.html">
+            
+                <a href="section1.html">
+            
+                    
+                    CSRF防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../chapter7/section1.html">
+            
+                <a href="../chapter7/section1.html">
+            
+                    
+                    SSRF防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../chapter8/section1.html">
+            
+                <a href="../chapter8/section1.html">
+            
+                    
+                    动态代码执行漏洞防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../chapter9/section1.html">
+            
+                <a href="../chapter9/section1.html">
+            
+                    
+                    反序列化漏洞防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../chapter10/section1.html">
+            
+                <a href="../chapter10/section1.html">
+            
+                    
+                    越权漏洞防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="../chapter11/section1.html">
+            
+                <a href="../chapter11/section1.html">
+            
+                    
+                    不安全的加密方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="../chapter12/section1.html">
+            
+                <a href="../chapter12/section1.html">
+            
+                    
+                    URL重定向漏洞防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="../end/README.md">
+            
+                <span>
+            
+                    
+                    结束
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >CSRF防范</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="1&#x4EC0;&#x4E48;&#x662F;csrf">1.&#x4EC0;&#x4E48;&#x662F;CSRF</h3>
+<p> &#x8DE8;&#x7AD9;&#x57DF;&#x8BF7;&#x6C42;&#x4F2A;&#x9020;(Cross Site Request Forgery)&#x662F;&#x4E00;&#x79CD;&#x7F51;&#x7EDC;&#x7684;&#x653B;&#x51FB;&#x65B9;&#x5F0F;&#xFF0C;&#x5B83;&#x5728; 2007 &#x5E74;&#x66FE;&#x88AB;&#x5217;&#x4E3A;&#x4E92;&#x8054;&#x7F51; 20 &#x5927;&#x5B89;&#x5168;&#x9690;&#x60A3;&#x4E4B;&#x4E00;,&#x4E5F;&#x88AB;&#x79F0;&#x4E3A;&#x201C;One Click Attack&#x201D;&#x6216;&#x8005;Session Riding&#xFF0C;&#x901A;&#x5E38;&#x7F29;&#x5199;&#x4E3A;CSRF&#x6216;&#x8005;XSRF&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x5BF9;&#x7F51;&#x7AD9;&#x7684;&#x6076;&#x610F;&#x5229;&#x7528;&#x3002;&#x5C3D;&#x7BA1;&#x542C;&#x8D77;&#x6765;&#x50CF;&#x8DE8;&#x7AD9;&#x811A;&#x672C;&#xFF08;XSS&#xFF09;&#xFF0C;&#x4F46;&#x5B83;&#x4E0E;XSS&#x975E;&#x5E38;&#x4E0D;&#x540C;&#xFF0C;&#x5E76;&#x4E14;&#x653B;&#x51FB;&#x65B9;&#x5F0F;&#x51E0;&#x4E4E;&#x76F8;&#x5DE6;&#x3002;XSS&#x5229;&#x7528;&#x7AD9;&#x70B9;&#x5185;&#x7684;&#x4FE1;&#x4EFB;&#x7528;&#x6237;&#xFF0C;&#x800C;CSRF&#x5219;&#x901A;&#x8FC7;&#x4F2A;&#x88C5;&#x6765;&#x81EA;&#x53D7;&#x4FE1;&#x4EFB;&#x7528;&#x6237;&#x7684;&#x8BF7;&#x6C42;&#x6765;&#x5229;&#x7528;&#x53D7;&#x4FE1;&#x4EFB;&#x7684;&#x7F51;&#x7AD9;&#x3002;&#x4E0E;XSS&#x653B;&#x51FB;&#x76F8;&#x6BD4;&#xFF0C;CSRF&#x653B;&#x51FB;&#x5F80;&#x5F80;&#x4E0D;&#x5927;&#x6D41;&#x884C;&#xFF08;&#x56E0;&#x6B64;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x9632;&#x8303;&#x7684;&#x8D44;&#x6E90;&#x4E5F;&#x76F8;&#x5F53;&#x7A00;&#x5C11;&#xFF09;&#x548C;&#x96BE;&#x4EE5;&#x9632;&#x8303;&#xFF0C;&#x6240;&#x4EE5;&#x88AB;&#x8BA4;&#x4E3A;&#x6BD4;XSS&#x66F4;&#x5177;&#x5371;&#x9669;&#x6027;.</p>
+<p> &#x4F60;&#x8FD9;&#x53EF;&#x4EE5;&#x8FD9;&#x4E48;&#x7406;&#x89E3;CSRF&#x653B;&#x51FB;&#xFF1A;&#x653B;&#x51FB;&#x8005;&#x76D7;&#x7528;&#x4E86;&#x4F60;&#x7684;&#x8EAB;&#x4EFD;&#xFF0C;&#x4EE5;&#x4F60;&#x7684;&#x540D;&#x4E49;&#x53D1;&#x9001;&#x6076;&#x610F;&#x8BF7;&#x6C42;&#x3002;CSRF&#x80FD;&#x591F;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x5305;&#x62EC;&#xFF1A;&#x4EE5;&#x4F60;&#x540D;&#x4E49;&#x53D1;&#x9001;&#x90AE;&#x4EF6;&#xFF0C;&#x53D1;&#x6D88;&#x606F;&#xFF0C;&#x76D7;&#x53D6;&#x4F60;&#x7684;&#x8D26;&#x53F7;&#xFF0C;&#x751A;&#x81F3;&#x4E8E;&#x8D2D;&#x4E70;&#x5546;&#x54C1;&#xFF0C;&#x865A;&#x62DF;&#x8D27;&#x5E01;&#x8F6C;&#x8D26;......&#x9020;&#x6210;&#x7684;&#x95EE;&#x9898;&#x5305;&#x62EC;&#xFF1A;&#x4E2A;&#x4EBA;&#x9690;&#x79C1;&#x6CC4;&#x9732;&#x4EE5;&#x53CA;&#x8D22;&#x4EA7;&#x5B89;&#x5168;&#x3002;</p>
+<h3 id="2&#x5982;&#x4F55;&#x9632;&#x8303;csrf">2.&#x5982;&#x4F55;&#x9632;&#x8303;CSRF</h3>
+<p>1.&#x5C06;cookie&#x8BBE;&#x7F6E;&#x4E3A;HttpOnly</p>
+<p>CRSF&#x653B;&#x51FB;&#x5F88;&#x5927;&#x7A0B;&#x5EA6;&#x4E0A;&#x662F;&#x5229;&#x7528;&#x4E86;&#x6D4F;&#x89C8;&#x5668;&#x7684;cookie&#xFF0C;&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x7AD9;&#x5185;&#x7684;XSS&#x6F0F;&#x6D1E;&#x76D7;&#x53D6;cookie&#xFF0C;&#x9700;&#x8981;&#x5728;cookie&#x4E2D;&#x8BBE;&#x7F6E;&quot;HttpOnly&quot;&#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x6837;&#x901A;&#x8FC7;&#x7A0B;&#x5E8F;&#xFF08;js&#x3001;applet&#x7B49;&#xFF09;&#x65E0;&#x6CD5;&#x8BFB;&#x53D6;&#x5230;cookie&#x4FE1;&#x606F;&#x3002;&#x907F;&#x514D;&#x4E86;&#x653B;&#x51FB;&#x8005;&#x4F2A;&#x9020;cookie&#x7684;&#x60C5;&#x51B5;&#x51FA;&#x73B0;&#x3002;</p>
+<p>&#x670D;&#x52A1;&#x7AEF;&#x7684;CSRF&#x65B9;&#x5F0F;&#x65B9;&#x6CD5;&#x5F88;&#x591A;&#x6837;&#xFF0C;&#x4F46;&#x603B;&#x7684;&#x601D;&#x60F3;&#x90FD;&#x662F;&#x4E00;&#x81F4;&#x7684;&#xFF0C;&#x5C31;&#x662F;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x9875;&#x9762;&#x589E;&#x52A0;&#x4F2A;&#x968F;&#x673A;&#x6570;&#x3002;</p>
+<p>2.&#x5728;&#x8BF7;&#x6C42;&#x5730;&#x5740;&#x4E2D;&#x6DFB;&#x52A0;token&#x5E76;&#x9A8C;&#x8BC1;</p>
+<p>&#x5728;&#x4E0E;&#x7528;&#x6237;&#x4EA4;&#x4E92;&#x65F6;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;CSRF &#x7684;&#x968F;&#x673A;TOKEN&#xFF0C;&#x79CD;&#x690D;&#x5728;&#x7528;&#x6237;&#x7684;cookie &#x4E2D;&#x3002;&#x5F53;&#x7528;&#x6237;&#x63D0;&#x4EA4;&#x8868;&#x5355;&#x65F6;&#xFF0C;&#x751F;&#x6210;&#x9690;&#x85CF;&#x57DF;&#xFF0C;&#x503C;&#x4E3A;COOKIE &#x4E2D;&#x968F;&#x673A;TOKEN&#xFF0C;&#x7528;&#x6237;&#x63D0;&#x4EA4;&#x8868;&#x5355;&#x540E;&#x9A8C;&#x8BC1;&#x4E24;&#x5904;token&#x503C;&#xFF0C;&#x6765;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x7528;&#x6237;&#x63D0;&#x4EA4;&#x3002;</p>
+<p>3.&#x9A8C;&#x8BC1;HTTP Referer&#x5B57;&#x6BB5; (&#x4E34;&#x65F6;&#x9632;&#x5FA1;)</p>
+<p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;:</strong></p>
+<pre><code class="lang-java">String referer=request.getHeader(<span class="hljs-string">&quot;referer&quot;</span>);
+<span class="hljs-keyword">if</span>(StringUtils.isEmpty(referer)){
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+} 
+<span class="hljs-keyword">if</span>(validAddress(referer)){
+    popInfoService.savePopInf(popInfVo);
+}
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">validAddress</span><span class="hljs-params">(String referer)</span></span>{
+    String refAddress = <span class="hljs-string">&quot;http://www.xiangyun.com&quot;</span>;
+    String str = referer.substring(<span class="hljs-number">0</span>, refAddress.length());
+    <span class="hljs-keyword">if</span>(refAddress.equals(str)){
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../chapter5/section1.html" class="navigation navigation-prev " aria-label="Previous page: 任意文件读取漏洞防范">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../chapter7/section1.html" class="navigation navigation-next " aria-label="Next page: SSRF防范">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"CSRF防范","level":"2.6","depth":1,"next":{"title":"SSRF防范","level":"2.7","depth":1,"path":"chapter7/section1.md","ref":"chapter7/section1.md","articles":[]},"previous":{"title":"任意文件读取漏洞防范","level":"2.5","depth":1,"path":"chapter5/section1.md","ref":"chapter5/section1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter6/section1.md","mtime":"2020-08-03T08:14:51.949Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-03T10:07:23.704Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

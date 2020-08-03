@@ -1,0 +1,506 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>文件上传漏洞防范 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../chapter5/section1.html" />
+    
+    
+    <link rel="prev" href="../chapter3/section1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Web应用开发安全规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../chapter1/section1.html">
+            
+                <a href="../chapter1/section1.html">
+            
+                    
+                    Sql注入防范
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../chapter1/section2.html">
+            
+                <a href="../chapter1/section2.html">
+            
+                    
+                    关系型数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../chapter1/section3.html">
+            
+                <a href="../chapter1/section3.html">
+            
+                    
+                    非关系型数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../chapter2/section2.html">
+            
+                <a href="../chapter2/section2.html">
+            
+                    
+                    XSS防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../chapter3/section1.html">
+            
+                <a href="../chapter3/section1.html">
+            
+                    
+                    XXE注入防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.4" data-path="section1.html">
+            
+                <a href="section1.html">
+            
+                    
+                    文件上传漏洞防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../chapter5/section1.html">
+            
+                <a href="../chapter5/section1.html">
+            
+                    
+                    任意文件读取漏洞防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../chapter6/section1.html">
+            
+                <a href="../chapter6/section1.html">
+            
+                    
+                    CSRF防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../chapter7/section1.html">
+            
+                <a href="../chapter7/section1.html">
+            
+                    
+                    SSRF防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../chapter8/section1.html">
+            
+                <a href="../chapter8/section1.html">
+            
+                    
+                    动态代码执行漏洞防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../chapter9/section1.html">
+            
+                <a href="../chapter9/section1.html">
+            
+                    
+                    反序列化漏洞防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../chapter10/section1.html">
+            
+                <a href="../chapter10/section1.html">
+            
+                    
+                    越权漏洞防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="../chapter11/section1.html">
+            
+                <a href="../chapter11/section1.html">
+            
+                    
+                    不安全的加密方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="../chapter12/section1.html">
+            
+                <a href="../chapter12/section1.html">
+            
+                    
+                    URL重定向漏洞防范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="../end/README.md">
+            
+                <span>
+            
+                    
+                    结束
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >文件上传漏洞防范</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="1&#x4EC0;&#x4E48;&#x662F;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x6F0F;&#x6D1E;">1.&#x4EC0;&#x4E48;&#x662F;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x6F0F;&#x6D1E;</h3>
+<p>&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x6F0F;&#x6D1E;&#x662F;web&#x5B89;&#x5168;&#x4E2D;&#x7ECF;&#x5E38;&#x7528;&#x5230;&#x7684;&#x4E00;&#x79CD;&#x6F0F;&#x6D1E;&#x5F62;&#x5F0F;&#x3002;&#x662F;&#x5BF9;&#x6570;&#x636E;&#x4E0E;&#x4EE3;&#x7801;&#x5206;&#x79BB;&#x539F;&#x5219;&#x7684;&#x4E00;&#x79CD;&#x653B;&#x51FB;&#x3002;&#x4E0A;&#x4F20;&#x6F0F;&#x6D1E;&#x987E;&#x540D;&#x601D;&#x4E49;&#xFF0C;&#x5C31;&#x662F;&#x653B;&#x51FB;&#x8005;&#x4E0A;&#x4F20;&#x4E86;&#x4E00;&#x4E2A;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x5982;&#x6728;&#x9A6C;&#xFF0C;&#x75C5;&#x6BD2;&#xFF0C;&#x6076;&#x610F;&#x811A;&#x672C;&#xFF0C;WebShell&#x7B49;&#x5230;&#x670D;&#x52A1;&#x5668;&#x6267;&#x884C;&#xFF0C;&#x5E76;&#x6700;&#x7EC8;&#x83B7;&#x5F97;&#x7F51;&#x7AD9;&#x63A7;&#x5236;&#x6743;&#x9650;&#x7684;&#x9AD8;&#x5371;&#x6F0F;&#x6D1E;&#x3002;</p>
+<h3 id="2&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x6F0F;&#x6D1E;&#x5371;&#x5BB3;">2.&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x6F0F;&#x6D1E;&#x5371;&#x5BB3;</h3>
+<p>&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x6F0F;&#x6D1E;&#x4E0E;SQL&#x6CE8;&#x5165;&#x6216;XSS&#x76F8;&#x6BD4;,&#x5176;&#x98CE;&#x9669;&#x66F4;&#x5927;,&#x5982;&#x679C;Web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5B58;&#x5728;&#x4E0A;&#x4F20;&#x6F0F;&#x6D1E;,&#x653B;&#x51FB;&#x8005;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;&#x662F;Web&#x811A;&#x672C;&#x8BED;&#x8A00;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x7684;Web&#x5BB9;&#x5668;&#x89E3;&#x91CA;&#x5E76;&#x6267;&#x884C;&#x4E86;&#x7528;&#x6237;&#x4E0A;&#x4F20;&#x7684;&#x811A;&#x672C;&#xFF0C;&#x5BFC;&#x81F4;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x3002;&#x5982;&#x679C;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;&#x662F;Flash&#x7684;&#x7B56;&#x7565;&#x6587;&#x4EF6;crossdomain.xml&#xFF0C;&#x9ED1;&#x5BA2;&#x7528;&#x4EE5;&#x63A7;&#x5236;Flash&#x5728;&#x8BE5;&#x57DF;&#x4E0B;&#x7684;&#x884C;&#x4E3A;&#x3002;&#x5982;&#x679C;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;&#x662F;&#x75C5;&#x6BD2;&#x3001;&#x6728;&#x9A6C;&#x6587;&#x4EF6;&#xFF0C;&#x9ED1;&#x5BA2;&#x7528;&#x4EE5;&#x8BF1;&#x9A97;&#x7528;&#x6237;&#x6216;&#x8005;&#x7BA1;&#x7406;&#x5458;&#x4E0B;&#x8F7D;&#x6267;&#x884C;&#x3002;&#x5982;&#x679C;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;&#x662F;&#x9493;&#x9C7C;&#x56FE;&#x7247;&#x6216;&#x4E3A;&#x5305;&#x542B;&#x4E86;&#x811A;&#x672C;&#x7684;&#x56FE;&#x7247;&#xFF0C;&#x5728;&#x67D0;&#x4E9B;&#x7248;&#x672C;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x4F1A;&#x88AB;&#x4F5C;&#x4E3A;&#x811A;&#x672C;&#x6267;&#x884C;&#xFF0C;&#x88AB;&#x7528;&#x4E8E;&#x9493;&#x9C7C;&#x548C;&#x6B3A;&#x8BC8;&#x3002;&#x751A;&#x81F3;&#x653B;&#x51FB;&#x8005;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4E0A;&#x4F20;&#x4E00;&#x4E2A;webshell&#x5230;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF0C;&#x5B8C;&#x5168;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;&#x6216;&#x81F4;&#x4F7F;&#x7CFB;&#x7EDF;&#x762B;&#x75EA;&#x3002;</p>
+<h3 id="3&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x6F0F;&#x6D1E;&#x539F;&#x7406;">3.&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x6F0F;&#x6D1E;&#x539F;&#x7406;</h3>
+<p>&#x5927;&#x90E8;&#x5206;&#x7F51;&#x7AD9;&#x548C;&#x5E94;&#x7528;&#x7CFB;&#x7EDF;&#x90FD;&#x6709;&#x4E0A;&#x4F20;&#x529F;&#x80FD;&#xFF0C;&#x800C;&#x7A0B;&#x5E8F;&#x5458;&#x5728;&#x5F00;&#x53D1;&#x4EFB;&#x610F;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x529F;&#x80FD;&#x65F6;&#xFF0C;&#x5E76;&#x672A;&#x8003;&#x8651;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x540E;&#x7F00;&#x7684;&#x5408;&#x6CD5;&#x6027;&#x6821;&#x9A8C;&#x6216;&#x8005;&#x662F;&#x5426;&#x53EA;&#x5728;&#x524D;&#x7AEF;&#x901A;&#x8FC7;js&#x8FDB;&#x884C;&#x540E;&#x7F00;&#x68C0;&#x9A8C;&#x3002;&#x8FD9;&#x65F6;&#x653B;&#x51FB;&#x8005;&#x53EF;&#x4EE5;&#x4E0A;&#x4F20;&#x4E00;&#x4E2A;&#x4E0E;&#x7F51;&#x7AD9;&#x811A;&#x672C;&#x8BED;&#x8A00;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x52A8;&#x6001;&#x811A;&#x672C;&#xFF0C;&#x4F8B;&#x5982;(jsp&#x3001;asp&#x3001;php&#x3001;aspx&#x6587;&#x4EF6;&#x540E;&#x7F00;)&#x5230;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF0C;&#x4ECE;&#x800C;&#x8BBF;&#x95EE;&#x8FD9;&#x4E9B;&#x6076;&#x610F;&#x811A;&#x672C;&#x4E2D;&#x5305;&#x542B;&#x7684;&#x6076;&#x610F;&#x4EE3;&#x7801;&#xFF0C;&#x8FDB;&#x884C;&#x52A8;&#x6001;&#x89E3;&#x6790;&#x6700;&#x7EC8;&#x8FBE;&#x5230;&#x6267;&#x884C;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x8FDB;&#x4E00;&#x6B65;&#x5F71;&#x54CD;&#x670D;&#x52A1;&#x5668;&#x5B89;&#x5168;&#x3002;</p>
+<h3 id="4&#x5982;&#x4F55;&#x9632;&#x8303;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x6F0F;&#x6D1E;">4.&#x5982;&#x4F55;&#x9632;&#x8303;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x6F0F;&#x6D1E;</h3>
+<p>&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x5230;&#x670D;&#x52A1;&#x5668;&#x968F;&#x673A;&#x547D;&#x540D;&#xFF0C;&#x9632;&#x6B62;&#x88AB;&#x731C;&#x89E3;&#x4E0A;&#x4F20;&#x8DEF;&#x5F84;&#xFF1B;
+&#x9650;&#x5236;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#xFF0C;&#x9632;&#x6B62;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x88AB;&#x6076;&#x610F;&#x5360;&#x7528;&#xFF1B;
+&#x9650;&#x5236;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#xFF0C;&#x9632;&#x6B62;&#x4E0A;&#x4F20;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x3002;</p>
+<p><strong>&#x6B63;&#x786E;&#x5199;&#x6CD5;:</strong></p>
+<pre><code class="lang-java">String fileName = multifile.getOriginalFilename();
+String Suffix = fileName.substring(fileName.lastIndexOf(<span class="hljs-string">&quot;.&quot;</span>)); <span class="hljs-comment">// &#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x540E;&#x7F00;&#x540D;</span>
+String mimeType = multifile.getContentType(); <span class="hljs-comment">// &#x83B7;&#x53D6;MIME&#x7C7B;&#x578B;</span>
+File excelFile = convert(multifile);
+
+<span class="hljs-comment">// &#x5224;&#x65AD;&#x6587;&#x4EF6;&#x540E;&#x7F00;&#x540D;&#x662F;&#x5426;&#x5728;&#x767D;&#x540D;&#x5355;&#x5185;(&#x4E00;&#x822C;&#x4E0D;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x9ED1;&#x540D;&#x5355;)  &#x6821;&#x9A8C;1</span>
+String picSuffixList[] = {<span class="hljs-string">&quot;.jpg&quot;</span>, <span class="hljs-string">&quot;.png&quot;</span>, <span class="hljs-string">&quot;.jpeg&quot;</span>, <span class="hljs-string">&quot;.gif&quot;</span>, <span class="hljs-string">&quot;.bmp&quot;</span>, <span class="hljs-string">&quot;.ico&quot;</span>};
+<span class="hljs-keyword">boolean</span> suffixFlag = <span class="hljs-keyword">false</span>;
+<span class="hljs-keyword">for</span> (String white_suffix : picSuffixList) {
+    <span class="hljs-keyword">if</span> (Suffix.toLowerCase().equals(white_suffix)) {
+        suffixFlag = <span class="hljs-keyword">true</span>;
+        <span class="hljs-keyword">break</span>;
+    }
+}
+<span class="hljs-keyword">if</span> (!suffixFlag) {
+    logger.error(<span class="hljs-string">&quot;[-] Suffix error: &quot;</span> + Suffix);
+    deleteFile(excelFile);
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Upload failed. Illeagl picture.&quot;</span>;
+}
+
+<span class="hljs-comment">// &#x5224;&#x65AD;MIME&#x7C7B;&#x578B;&#x662F;&#x5426;&#x5728;&#x9ED1;&#x540D;&#x5355;&#x5185; &#x6821;&#x9A8C;2</span>
+String mimeTypeBlackList[] = {
+        <span class="hljs-string">&quot;text/html&quot;</span>,
+        <span class="hljs-string">&quot;text/javascript&quot;</span>,
+        <span class="hljs-string">&quot;application/javascript&quot;</span>,
+        <span class="hljs-string">&quot;application/ecmascript&quot;</span>,
+        <span class="hljs-string">&quot;text/xml&quot;</span>,
+        <span class="hljs-string">&quot;application/xml&quot;</span>
+};
+<span class="hljs-keyword">for</span> (String blackMimeType : mimeTypeBlackList) {
+    <span class="hljs-comment">// &#x7528;contains&#x662F;&#x4E3A;&#x4E86;&#x9632;&#x6B62;text/html;charset=UTF-8&#x7ED5;&#x8FC7;</span>
+    <span class="hljs-keyword">if</span> (SecurityUtil.replaceSpecialStr(mimeType).toLowerCase().contains(blackMimeType)) {
+        logger.error(<span class="hljs-string">&quot;[-] Mime type error: &quot;</span> + mimeType);
+        deleteFile(excelFile);
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Upload failed. Illeagl picture.&quot;</span>;
+    }
+}
+
+<span class="hljs-comment">// &#x5224;&#x65AD;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x662F;&#x5426;&#x662F;&#x56FE;&#x7247; &#x6821;&#x9A8C;3</span>
+<span class="hljs-keyword">boolean</span> isImageFlag = isImage(excelFile);
+
+<span class="hljs-keyword">if</span> (!isImageFlag) {
+    logger.error(<span class="hljs-string">&quot;[-] File is not Image&quot;</span>);
+    deleteFile(excelFile);
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Upload failed. Illeagl picture.&quot;</span>;
+}
+
+<span class="hljs-comment">// &#x6587;&#x4EF6;&#x91CD;&#x65B0;&#x547D;&#x540D;&#x540E;&#x5B58;&#x50A8;</span>
+<span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">byte</span>[] bytes = multifile.getBytes();
+    Path path = Paths.get(UPLOADED_FOLDER + UUID.randomUUID().toString() + <span class="hljs-string">&quot;_&quot;</span> + multifile.getOriginalFilename());
+    Files.write(path, bytes);
+} <span class="hljs-keyword">catch</span> (IOException e) {
+    logger.error(e.toString());
+    deleteFile(excelFile);
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Upload failed&quot;</span>;
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../chapter3/section1.html" class="navigation navigation-prev " aria-label="Previous page: XXE注入防范">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../chapter5/section1.html" class="navigation navigation-next " aria-label="Next page: 任意文件读取漏洞防范">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"文件上传漏洞防范","level":"2.4","depth":1,"next":{"title":"任意文件读取漏洞防范","level":"2.5","depth":1,"path":"chapter5/section1.md","ref":"chapter5/section1.md","articles":[]},"previous":{"title":"XXE注入防范","level":"2.3","depth":1,"path":"chapter3/section1.md","ref":"chapter3/section1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter4/section1.md","mtime":"2020-07-17T06:09:10.787Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-03T10:07:23.704Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
